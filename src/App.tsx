@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import logo from "./logo.svg"
 import styled, { keyframes } from "styled-components/macro"
+import { fetchAll } from './api/article'
 
 const StyledApp = styled.div`
   text-align: center;
@@ -39,6 +40,12 @@ const StyledLogo = styled.img`
 `
 
 export default function App() {
+  const [articles, setArticls] = useState([])
+
+  useEffect(() => {
+    fetchAll().then((data) => setArticls(data))
+  }, [])
+
   return (
     <StyledApp>
       <StyledHeader>
