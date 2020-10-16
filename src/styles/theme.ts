@@ -15,6 +15,7 @@ const theme = {
     sub: '#94a1ac',
     active: '#3b2eb2',
     inactive: '#666666',
+    header: 'white',
   }
 
 } as const
