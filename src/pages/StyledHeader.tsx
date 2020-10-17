@@ -43,11 +43,3 @@ export const StyledHeaderTitle = styled.div`
   padding: 100px 0;
   text-align: center;
 `
-
-export const StyledHeaderTitleTop = styled.h1`
-  font-size: 36px;
-`
-
-export const StyledHeaderTitleBot = styled.h4`
-  font-size: 14px;
-`

@@ -16,6 +16,9 @@ const theme = {
     active: '#3b2eb2',
     inactive: '#666666',
     header: 'white',
+  },
+  headings: {
+    size: [36, 24, 18, 14]
   }
 
 } as const

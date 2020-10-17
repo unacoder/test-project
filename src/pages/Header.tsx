@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../components/Button'
+import Heading from '../components/Heading'
 import {
   StyledHeader,
   StyledHeaderContent,
@@ -7,13 +8,15 @@ import {
   StyledHeaderNav,
   StyledHeaderNavItem,
   StyledHeaderTitle,
-  StyledHeaderTitleBot,
-  StyledHeaderTitleTop,
 } from './StyledHeader'
 
-const Header: React.FC = (props) => {
+interface HeaderProps {
+  className?: string
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
   return (
-    <StyledHeader>
+    <StyledHeader className={props.className}>
       <StyledHeaderContent>
         <StyledHeaderNav>
           <StyledHeaderNavItem flexible>
@@ -28,10 +31,8 @@ const Header: React.FC = (props) => {
           </StyledHeaderNavItem>
         </StyledHeaderNav>
         <StyledHeaderTitle>
-          <StyledHeaderTitleTop>Our Blog</StyledHeaderTitleTop>
-          <StyledHeaderTitleBot>
-            Home - Blog
-          </StyledHeaderTitleBot>
+          <Heading level={1}>Our Blog</Heading>
+          <Heading level={4}>Home - Blog</Heading>
         </StyledHeaderTitle>
       </StyledHeaderContent>
     </StyledHeader>

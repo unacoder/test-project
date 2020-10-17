@@ -9,7 +9,7 @@ interface IButtonProps {
   readonly onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const StyledButton = styled.button<IButtonProps>`
+export const StyledButton = styled.button<IButtonProps>`
   padding: 1em 2em;
   outline: none;
   font-size: 14px;
