@@ -3,6 +3,7 @@ import { styled } from '../styles/theme'
 
 interface HeadingProps {
   level: 1 | 2 | 3 | 4
+  className?: string
 }
 
 // Div is temp here
@@ -23,7 +24,7 @@ const StyledHeading = styled.h1<HeadingProps>`
 const Heading: React.FC<HeadingProps> = (props) => {
   return (
     // @ts-ignore don't know how to handle this case, really no clue
-    <StyledHeading as={`h${props.level}`} level={props.level}>
+    <StyledHeading as={`h${props.level}`} level={props.level} className={props.className}>
       {props.children}
     </StyledHeading>
   )

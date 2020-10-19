@@ -8,9 +8,9 @@ import { RootState } from '../../../store'
 import {styled} from '../../../styles/theme'
 
 const StyledArticlesSidebar = styled.aside`
-  flex: 0 0 375px;
-  margin-left: 50px;
-  padding: 10px;
+  flex: 0 0 300px;
+  margin-left: 20px;
+  padding: 10px 0;
 `
 
 const StyledSearch = styled(Input)`
@@ -50,7 +50,7 @@ const ArticlesSidebar: React.FC = (props) => {
     <StyledCategories>
       <StyledCategoriesHeader>Categories</StyledCategoriesHeader>
       {tags.map(tag => (
-        <StyledCategory>{tag}</StyledCategory>
+        <StyledCategory key={tag}>{tag}</StyledCategory>
       ))}
     </StyledCategories>
   </StyledArticlesSidebar>
