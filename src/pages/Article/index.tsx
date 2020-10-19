@@ -1,12 +1,12 @@
 import React from 'react'
 import { Route, useRouteMatch } from 'react-router'
+import ArticlesSidebar from './components/sidebar'
 import List from './List'
 import Single from './Single'
 import {
   StyledArticles,
   StyledArticlesMain,
-  StyledArticlesSidebar,
-} from './StyledIndex'
+} from './components/StyledIndex'
 
 const Articles: React.FunctionComponent = (props) => {
   const match = useRouteMatch().path
@@ -16,7 +16,7 @@ const Articles: React.FunctionComponent = (props) => {
         <Route exact path={`${match}/`} component={List}/>
         <Route exact path={`${match}/:id`} component={Single}/>
       </StyledArticlesMain>
-      <StyledArticlesSidebar />
+      <ArticlesSidebar />
     </StyledArticles>
   )
 }
